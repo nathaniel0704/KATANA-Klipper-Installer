@@ -1,0 +1,15 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Klipper / User Data (Do not sync user configs if running locally)
+printer_data/
+klipper_backup_*.zip
+
+# Logs
+*.log
