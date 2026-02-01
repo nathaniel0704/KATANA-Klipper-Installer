@@ -15,16 +15,16 @@ LOG_DIR="$PRINTER_DATA/logs"
 WIDTH=70
 
 # --- [ 1. VISUAL ENGINE ] ---
-C_PURPLE='\033[38;5;93m'
-C_PINK='\033[38;5;201m'
-C_CYAN='\033[38;5;51m'
-C_NEON='\033[38;5;87m'
-C_GREEN='\033[38;5;46m'
-C_RED='\033[38;5;196m'
-C_GREY='\033[38;5;238m'
-C_TXT='\033[38;5;255m'
-C_WARN='\033[38;5;226m'
-NC='\033[0m'
+C_PURPLE=$'\033[38;5;93m'
+C_PINK=$'\033[38;5;201m'
+C_CYAN=$'\033[38;5;51m'
+C_NEON=$'\033[38;5;87m'
+C_GREEN=$'\033[38;5;46m'
+C_RED=$'\033[38;5;196m'
+C_GREY=$'\033[38;5;238m'
+C_TXT=$'\033[38;5;255m'
+C_WARN=$'\033[38;5;226m'
+NC=$'\033[0m'
 
 # Helpers
 draw_line() { printf "${C_PURPLE}╠═$(printf '═%.0s' $(seq 1 $WIDTH))═╣${NC}\n"; }
@@ -45,8 +45,7 @@ status_row() {
         icon="${C_GREY}○${NC}"
     fi
     
-    # Padding magic for perfect alignment
-    printf "${C_PURPLE}║${NC}  ${icon} ${C_NEON}%-15s${NC} : %-20s ${C_GREY}▒ %-25s${NC} ${C_PURPLE}║${NC}\n" "$name" "$state" "$desc"
+    printf "${C_PURPLE}║${NC}  %s %s%-15s%s : %-20s ${C_GREY}▒ %-25s${NC} ${C_PURPLE}║${NC}\n" "$icon" "$C_NEON" "$name" "$NC" "$state" "$desc"
 }
 
 # Menu Item Generator
@@ -356,4 +355,5 @@ while true; do
         9) do_maint ;;
         [Xx]) clear; exit 0 ;;
     esac
+
 done
