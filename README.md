@@ -46,8 +46,8 @@ KATANA treats your 3D printer like a server:
 * **Log2Ram:** Pre-configured to extend your SD card's lifespan by writing logs to RAM instead of disk (prevents corruption on power loss).
 
 ### 4. 🧩 Extensions: KAMP & ShakeTune
-* **KAMP (Klipper Adaptive Meshing & Purging):** KATANA sets up KAMP specifically for **Smart Parking** and **Adaptive Purging**. 
-    * *Note: We rely on Klipper's superior native adaptive meshing for the grid, using KAMP for the intelligent purge lines.*
+* **KAMP (Smart Purging):** KATANA installs the repository and generates the necessary configuration files.
+    * *⚠️ **Manual Action Required:** KATANA does not modify your `printer.cfg` automatically. You must manually add `[include KAMP_Settings.cfg]` and update your `PRINT_START` macro to use `LINE_PURGE` or `VORON_PURGE`.*
 * **ShakeTune:** Fully automated installation for Input Shaper resonance testing and graph generation.
 
 ## ⚡ Installation
@@ -62,4 +62,5 @@ git clone [https://github.com/DEIN_GITHUB_NAME/KATANA-Klipper-Installer.git](htt
 cd KATANA-Klipper-Installer
 chmod +x katana.sh
 ./katana.sh
+
 
