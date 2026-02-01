@@ -1,3 +1,4 @@
+<img width="673" height="738" alt="Screenshot 2026-02-01 035119" src="https://github.com/user-attachments/assets/c92a4b28-a275-405f-ad63-1f14d52ae56d" />
 # ⚔️ KATANA - The Ultimate Klipper Installation Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
@@ -88,3 +89,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ---
 
 *Keywords: Klipper Installer, Klipper Script, Voron 2.4 Setup, Raspberry Pi 3D Printer, Mainsail Install, Fluidd Install, Moonraker Config, Klipper Update Helper, 3D Printing Automation, KIAUH Alternative.*
+
