@@ -59,7 +59,6 @@ The "Auto-Pilot" function executes a linear provisioning script:
 
 ```bash
 cd ~
-git clone [https://github.com/Extrutex/KATANA-Klipper-Installer.git](https://github.com/Extrutex/KATANA-Klipper-Installer.git)
-cd KATANA-Klipper-Installer
+git clone https://github.com/Extrutex/KATANA-Klipper-Installer.git
 chmod +x katana.sh
 ./katana.sh
