@@ -1,14 +1,19 @@
-<img width="610" height="688" alt="KATANAOS" src="https://github.com/user-attachments/assets/47f710ef-05d4-4dcc-9973-207e3da95182" />
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/9efad6eb-91cf-4e4d-998e-d2c3e4ff433a" width="100%" alt="KATANAOS Interface" />
 
-                                                    # ⚔️ KATANAOS - Pro-Grade Klipper Suite
-                                                  
-                                                    [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
-                                                    [![Platform](https://img.shields.io/badge/Platform-Debian%20%7C%20Raspbian%20%7C%20Armbian-blue.svg)]()
-                                                    [![Bash](https://img.shields.io/badge/Language-Bash%20Script-green.svg)]()
-                                                  
-                                                    > **Opinionated automation for the modern 3D printing stack.** <br>
-                                                    > Deploys a hardened, fully configured Klipper environment in minutes.
-                                                  </div>
+  <h1>⚔️ KATANAOS - Pro-Grade Klipper Suite</h1>
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
+  [![Platform](https://img.shields.io/badge/Platform-Debian%20%7C%20Raspbian%20%7C%20Armbian-blue.svg)]()
+  [![Bash](https://img.shields.io/badge/Language-Bash%20Script-green.svg)]()
+
+  <br>
+
+  <p>
+    <b>Opinionated automation for the modern 3D printing stack.</b><br>
+    Deploys a hardened, fully configured Klipper environment in minutes.
+  </p>
+</div>
 
 ---
 
