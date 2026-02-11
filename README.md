@@ -1,17 +1,23 @@
-<img width="610" height="688" alt="KATANAOS" src="https://github.com/user-attachments/assets/bed6be9f-2638-4f6b-9682-c89b61f46ecc" />
-
+<div align="center">
+  <img width="610" height="688" alt="KATANAOS" src="https://github.com/user-attachments/assets/bed6be9f-2638-4f6b-9682-c89b61f46ecc" />
 
   <h1>⚔️ KATANAOS - Pro-Grade Klipper Suite</h1>
 
-  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-purple.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  [![Platform](https://img.shields.io/badge/Platform-Debian%20%7C%20Raspbian%20%7C%20Armbian-blue.svg)]()
-  [![Bash](https://img.shields.io/badge/Language-Bash%20Script-green.svg)]()
+  <a href="https://www.gnu.org/licenses/gpl-3.0">
+    <img src="https://img.shields.io/badge/License-GPLv3-blueviolet.svg" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/Platform-Debian%20%7C%20Raspbian%20%7C%20Armbian-ff00bf.svg" alt="Platform">
+  <img src="https://img.shields.io/badge/Language-Bash%20Script-00ffff.svg" alt="Language">
 
-  > **Opinionated automation for the modern 3D printing stack.** <br>
-  > Deploys a hardened, fully configured Klipper environment in minutes.
+  <br/><br/>
+
+  <p>
+    <b>Opinionated automation for the modern 3D printing stack.</b><br>
+    Deploys a hardened, fully configured Klipper environment in minutes.
+  </p>
 </div>
 
----
+<hr/>
 
 ## ⚡ Overview
 
@@ -68,6 +74,6 @@ Security is not an option; it is a default.
 ```bash
 cd ~
 git clone [https://github.com/Extrutex/KATANA-Klipper-Installer.git](https://github.com/Extrutex/KATANA-Klipper-Installer.git)
-mv KATANA-Klipper-Installer/katanaos.sh .
+cd KATANA-Klipper-Installer/katanaos.sh 
 chmod +x katanaos.sh
 ./katanaos.sh
