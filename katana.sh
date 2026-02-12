@@ -341,6 +341,7 @@ do_extras() {
     
     if [[ "$exch" == "b" || "$exch" == "B" ]]; then return; fi
 
+    # Logik für Option 1 (ALLES installieren)
     if [[ "$exch" == "1" ]]; then
         exec_silent "KAMP" "rm -rf ~/Klipper-Adaptive-Meshing-Purging && git clone https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git ~/Klipper-Adaptive-Meshing-Purging && cp ~/Klipper-Adaptive-Meshing-Purging/Configuration/KAMP_Settings.cfg $CONFIG_DIR/"
         exec_silent "ShakeTune" "rm -rf ~/klippain_shaketune && git clone https://github.com/Frix-x/klippain-shaketune.git ~/klippain_shaketune && ~/klippain_shaketune/install.sh"
@@ -353,7 +354,34 @@ do_extras() {
         elif [ "$probech" == "2" ]; then
              exec_silent "Cartographer3D" "rm -rf ~/cartographer-klipper && git clone https://github.com/Cartographer3D/cartographer-klipper.git ~/cartographer-klipper && ~/cartographer-klipper/install.sh"
         fi
+
+    # FEHLENDER BLOCK für Option 2 (Einzelabfrage)
+    elif [[ "$exch" == "2" ]]; then
+        echo -e "${C_CYAN}  >> Custom Selection Mode${NC}"
+        
+        # 1. KAMP Abfrage
+        read -p "  Install KAMP (Adaptive Meshing)? (y/n): " kamp_choice
+        if [[ "$kamp_choice" =~ ^[Yy]$ ]]; then
+            exec_silent "KAMP" "rm -rf ~/Klipper-Adaptive-Meshing-Purging && git clone https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git ~/Klipper-Adaptive-Meshing-Purging && cp ~/Klipper-Adaptive-Meshing-Purging/Configuration/KAMP_Settings.cfg $CONFIG_DIR/"
+        fi
+
+        # 2. ShakeTune Abfrage
+        read -p "  Install ShakeTune (Input Shaper Tools)? (y/n): " st_choice
+        if [[ "$st_choice" =~ ^[Yy]$ ]]; then
+            exec_silent "ShakeTune" "rm -rf ~/klippain_shaketune && git clone https://github.com/Frix-x/klippain-shaketune.git ~/klippain_shaketune && ~/klippain_shaketune/install.sh"
+        fi
+
+        # 3. Probe Abfrage
+        echo -e "${C_WARN}  >> Install Probe/Scanner?${NC}"
+        echo -e "  1) Beacon3D  2) Cartographer  3) None"
+        read -p "  >> " probech
+        if [ "$probech" == "1" ]; then
+             exec_silent "Beacon3D" "rm -rf ~/beacon_klipper && git clone https://github.com/beacon3d/beacon_klipper.git ~/beacon_klipper && ~/beacon_klipper/install.sh"
+        elif [ "$probech" == "2" ]; then
+             exec_silent "Cartographer3D" "rm -rf ~/cartographer-klipper && git clone https://github.com/Cartographer3D/cartographer-klipper.git ~/cartographer-klipper && ~/cartographer-klipper/install.sh"
+        fi
     fi
+
     sudo systemctl restart moonraker
     read -p "  Press Enter..."
 }
@@ -499,3 +527,4 @@ EOF
         *) echo -e "${C_RED}  Invalid Option!${NC}"; sleep 1 ;;
     esac
 done
+
